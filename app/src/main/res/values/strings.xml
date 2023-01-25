@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">WorkoutApp</string>
+    <string name="start">START</string>
+    <string name="Excersize_title">GET READY FOR</string>
+    <string name="next">Coming Up: </string>
+</resources>
