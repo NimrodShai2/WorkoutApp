@@ -1,5 +1,7 @@
 package my.nimrodshai.workoutapp
 
+import android.media.MediaPlayer
+import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.CountDownTimer
@@ -22,6 +24,7 @@ class ExcersizeActivity : AppCompatActivity(), TextToSpeech.OnInitListener {
     private var exerciseList: ArrayList<Exercise>? = null
     private var exercisePosition = -1
     private var tts: TextToSpeech? = null
+    private var player: MediaPlayer? = null
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -62,6 +65,17 @@ class ExcersizeActivity : AppCompatActivity(), TextToSpeech.OnInitListener {
     }
 
     private fun setUpExerciseView() {
+
+        try {
+            val soundURI =
+                Uri.parse("android.resource://my.nimrodshai.workoutapp/"
+                        + R.raw.press_start)
+            player = MediaPlayer.create(applicationContext, soundURI)
+            player?.isLooping = false
+            player?.start()
+        } catch (e: Exception) {
+            e.printStackTrace()
+        }
         binding?.flRestView?.visibility = View.INVISIBLE
         binding?.tvTitle?.visibility = View.INVISIBLE
         binding?.tvNextExercise?.visibility = View.GONE
@@ -147,6 +161,10 @@ class ExcersizeActivity : AppCompatActivity(), TextToSpeech.OnInitListener {
         if (tts != null) {
             tts?.stop()
             tts?.shutdown()
+        }
+
+        if (player != null) {
+            player?.stop()
         }
         binding = null
     }
