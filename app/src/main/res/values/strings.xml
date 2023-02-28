@@ -3,4 +3,6 @@
     <string name="start">START</string>
     <string name="Excersize_title">GET READY FOR</string>
     <string name="next">Coming Up: </string>
+    <string name="instructions">instructions</string>
+    <string name="exercise_name">Exercise Name</string>
 </resources>
