@@ -11,4 +11,5 @@
     <color name="accent">#008F24</color>
     <color name="light_grey">#C4C4C4</color>
     <color name="toolbar_color_control_normal">#000025</color>
+    <color name="recycler_text_color">#212121</color>
 </resources>
