@@ -5,4 +5,8 @@
     <string name="next">Coming Up: </string>
     <string name="instructions">instructions</string>
     <string name="exercise_name">Exercise Name</string>
+    <string name="finished">Finished!</string>
+    <string name="end">END</string>
+    <string name="congratulations">Congratulations!</string>
+    <string name="done_message">You have done the workout!</string>
 </resources>

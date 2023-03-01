@@ -1,5 +1,6 @@
 package my.nimrodshai.workoutapp
 
+import android.content.Intent
 import android.media.MediaPlayer
 import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
@@ -147,18 +148,19 @@ class ExcersizeActivity : AppCompatActivity(), TextToSpeech.OnInitListener {
 
             override fun onFinish() {
 
-                exerciseList!![exercisePosition].isSelected = false
-                exerciseList!![exercisePosition].isCompleted = true
-                exerciseAdapter!!.notifyDataSetChanged()
                 if (exercisePosition < exerciseList?.size!! - 1) {
+                    exerciseList!![exercisePosition].isSelected = false
+                    exerciseList!![exercisePosition].isCompleted = true
+                    exerciseAdapter!!.notifyDataSetChanged()
                     setUpRestView()
                 } else {
-                    Snackbar.make(
+                    finish()
+                    val intent = Intent(
                         this@ExcersizeActivity,
-                        binding?.clBody as View,
-                        "Congrats! You Finished!",
-                        Snackbar.LENGTH_SHORT
-                    ).show()
+                        FinishActivity::class.java
+                    )
+                    startActivity(intent)
+
                 }
             }
 
