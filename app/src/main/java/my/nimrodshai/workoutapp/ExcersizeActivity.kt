@@ -1,5 +1,6 @@
 package my.nimrodshai.workoutapp
 
+import android.app.Dialog
 import android.content.Intent
 import android.media.MediaPlayer
 import android.net.Uri
@@ -11,6 +12,7 @@ import android.view.View
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.google.android.material.snackbar.Snackbar
 import my.nimrodshai.workoutapp.databinding.ActivityExcersizeBinding
+import my.nimrodshai.workoutapp.databinding.DialogBackConfirmationBinding
 import java.util.*
 import kotlin.collections.ArrayList
 
@@ -36,7 +38,9 @@ class ExcersizeActivity : AppCompatActivity(), TextToSpeech.OnInitListener {
         setContentView(binding?.root)
         setSupportActionBar(binding?.tbExercise)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
-        binding?.tbExercise?.setNavigationOnClickListener { onBackPressed() }
+        binding?.tbExercise?.setNavigationOnClickListener {
+            onBackPressed()
+        }
         exerciseList = Constants.defaultExerciseList()
         restDurationSeconds = 10 //TODO: implement user choice of rest intervals
         exerciseDurationSeconds = 30//TODO: implement user choice of exercise intervals
@@ -47,11 +51,31 @@ class ExcersizeActivity : AppCompatActivity(), TextToSpeech.OnInitListener {
         setUpStatusRecyclerView()
     }
 
+    private fun dialogForBackButton() {
+        val dialog = Dialog(this)
+        val dialogBinding = DialogBackConfirmationBinding.inflate(layoutInflater)
+        dialog.setContentView(dialogBinding.root)
+        dialog.setCanceledOnTouchOutside(false)
+        dialogBinding.tvYes.setOnClickListener {
+            this@ExcersizeActivity.finish()
+            dialog.dismiss()
+        }
+        dialogBinding.tvNo.setOnClickListener{
+            dialog.dismiss()
+        }
+        dialog.show()
+
+    }
+
     private fun setUpStatusRecyclerView() {
         binding?.rvExerciseStatus?.layoutManager =
             LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
         exerciseAdapter = ExerciseStatusAdapter(exerciseList!!)
         binding?.rvExerciseStatus?.adapter = exerciseAdapter
+    }
+
+    override fun onBackPressed() {
+        dialogForBackButton()
     }
 
     private fun setUpRestView() {

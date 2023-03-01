@@ -9,4 +9,8 @@
     <string name="end">END</string>
     <string name="congratulations">Congratulations!</string>
     <string name="done_message">You have done the workout!</string>
+    <string name="r_u_sure">This will stop your workout. You\'ve come this far, are you sure you want to quit?</string>
+    <string name="confirmation">Are you sure?</string>
+    <string name="yes">YES</string>
+    <string name="no">NO</string>
 </resources>
