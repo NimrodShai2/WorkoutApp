@@ -55,7 +55,7 @@
     <LinearLayout
         android:padding="10dp"
         android:layout_below="@id/tilMetricUnitHeight"
-        android:id="@+id/llDiplayBMIResult"
+        android:id="@+id/llDisplayBMIResult"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="25dp"
@@ -100,10 +100,9 @@
             android:textSize="18sp"
             tools:text="Normal" />
     </LinearLayout>
-    <!--positioned below llDiplayBMIResult-->
     <Button
         android:layout_margin="10dp"
-        android:layout_below="@id/llDiplayBMIResult"
+        android:layout_below="@id/llDisplayBMIResult"
         android:id="@+id/btnCalculateUnits"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

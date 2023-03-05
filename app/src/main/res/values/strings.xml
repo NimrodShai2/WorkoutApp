@@ -18,4 +18,6 @@
     <string name="weight_metric">Weight (in KG)</string>
     <string name="height_metric">Height (in CM)</string>
     <string name="calculate">CALCULATE</string>
+    <string name="calendar">Calendar</string>
+    <string name="history">HISTORY</string>
 </resources>

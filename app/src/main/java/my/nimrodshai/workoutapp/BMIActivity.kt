@@ -66,7 +66,7 @@ class BMIActivity : AppCompatActivity() {
 
         val bmiValue = BigDecimal(bmi).setScale(2, RoundingMode.HALF_EVEN).toString()
 
-        binding?.llDiplayBMIResult?.visibility = View.VISIBLE
+        binding?.llDisplayBMIResult?.visibility = View.VISIBLE
         binding?.tvBMIValue?.text = bmiValue
         binding?.tvBMIType?.text = label
         binding?.tvBMIDescription?.text = description
