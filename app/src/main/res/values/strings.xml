@@ -21,4 +21,6 @@
     <string name="calendar">Calendar</string>
     <string name="history">HISTORY</string>
     <string name="entry">"Entry "</string>
+    <string name="completed">EXERCISE COMPLETED</string>
+    <string name="no_data">NO DATA AVAILABLE</string>
 </resources>
