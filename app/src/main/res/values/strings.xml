@@ -20,4 +20,5 @@
     <string name="calculate">CALCULATE</string>
     <string name="calendar">Calendar</string>
     <string name="history">HISTORY</string>
+    <string name="entry">"Entry "</string>
 </resources>
