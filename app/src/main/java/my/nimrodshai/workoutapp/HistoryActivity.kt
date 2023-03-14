@@ -19,7 +19,7 @@ class HistoryActivity : AppCompatActivity() {
         setContentView(binding?.root)
         setSupportActionBar(binding?.tbHistory)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
-        supportActionBar?.title = "History"
+        supportActionBar?.title = resources.getString(R.string.history)
         binding?.tbHistory?.setNavigationOnClickListener {
             onBackPressed()
         }
