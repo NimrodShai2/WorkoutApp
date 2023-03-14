@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">Aplicación de entrenamiento</string>
+    <string name="start">COMENZAR</string>
+    <string name="Excersize_title">PREPÁRATE PARA</string>
+    <string name="next">Subiendo:</string>
+    <string name="instructions">instrucciones</string>
+    <string name="exercise_name">Nombre del ejercicio</string>
+    <string name="finished">¡Finalizado!</string>
+    <string name="end">FIN</string>
+    <string name="congratulations">¡Felicidades!</string>
+    <string name="done_message">¡Has hecho el entrenamiento!</string>
+    <string name="r_u_sure">Esto detendrá su entrenamiento. Has llegado hasta aquí, ¿estás seguro de que quieres dejarlo?</string>
+    <string name="confirmation">¿Estas seguro?</string>
+    <string name="yes">SÍ</string>
+    <string name="no">NO</string>
+    <string name="bmi">BMI</string>
+    <string name="calculator">CALCULADORA</string>
+    <string name="weight_metric">Peso (en KG)</string>
+    <string name="height_metric">Altura (en CM)</string>
+    <string name="calculate">CALCULAR</string>
+    <string name="calendar">Calendario</string>
+    <string name="history">HISTORIA</string>
+    <string name="entry">"Entrada "</string>
+    <string name="completed">EJERCICIO COMPLETADO</string>
+    <string name="no_data">DATOS NO DISPONIBLES</string>
+    <string name="choose_language">Elige lengua</string>
+</resources>

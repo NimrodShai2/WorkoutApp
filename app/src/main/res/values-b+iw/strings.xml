@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">בואו נתאמן</string>
+    <string name="start">התחל</string>
+    <string name="Excersize_title">התכונן לתרגיל הבא</string>
+    <string name="next">הבא בתור</string>
+    <string name="instructions">הוראות</string>
+    <string name="exercise_name">שם התרגיל</string>
+    <string name="finished">סיימת!</string>
+    <string name="end">סוף</string>
+    <string name="congratulations">כל הכבוד!</string>
+    <string name="done_message">סיימת את האימון!</string>
+    <string name="r_u_sure">לחיצה על "כן" תגרום לסגירת האימון. הגעת עד כאן, האם אתה בטוח שברצונך לצאת?</string>
+    <string name="confirmation">האם אתה בטוח?</string>
+    <string name="yes">כן</string>
+    <string name="no">לא</string>
+    <string name="bmi">BMI</string>
+    <string name="calculator">מחשבון</string>
+    <string name="weight_metric">משקל (בק"ג)</string>
+    <string name="height_metric">גובה (בק"ג)</string>
+    <string name="calculate">חשב</string>
+    <string name="calendar">לוח שנה</string>
+    <string name="history">היסטוריה</string>
+    <string name="entry">רשומה</string>
+    <string name="completed">תרגיל שהושלם</string>
+    <string name="no_data">אין נתונים להצגה</string>
+    <string name="choose_language">בחר שפה</string>
+</resources>

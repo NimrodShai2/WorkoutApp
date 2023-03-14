@@ -7,6 +7,16 @@
     android:padding="@dimen/main_screen_main_layout_padding"
     tools:context=".MainActivity">
 
+    <Button
+        android:id="@+id/btn_lg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_generic"
+        android:text="@string/choose_language"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
     <ImageView
         android:id="@+id/iv_entry"
         android:layout_width="wrap_content"

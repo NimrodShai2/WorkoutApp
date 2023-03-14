@@ -1,8 +1,8 @@
 package my.nimrodshai.workoutapp.db
 
-import android.app.Application
+import com.zeugmasolutions.localehelper.LocaleAwareApplication
 
-class WorkoutApp : Application() {
+class WorkoutApp : LocaleAwareApplication() {
     val db by lazy {
         HistoryDb.getInstance(this)
     }

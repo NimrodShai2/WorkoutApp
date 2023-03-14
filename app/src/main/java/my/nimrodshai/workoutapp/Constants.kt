@@ -35,4 +35,6 @@ object Constants {
 
         return res
     }
+
+    val languages = arrayOf("English", "Hebrew", "Spanish")
 }
