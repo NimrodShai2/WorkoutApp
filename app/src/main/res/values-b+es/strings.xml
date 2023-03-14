@@ -24,4 +24,19 @@
     <string name="completed">EJERCICIO COMPLETADO</string>
     <string name="no_data">DATOS NO DISPONIBLES</string>
     <string name="choose_language">Elige lengua</string>
+    <string name="extremley_under_lable">Severamente bajo de peso</string>
+    <string name="extremley_under_des">¡Debes comer más y ganar algo de peso!</string>
+    <string name="under_label">Bajo peso</string>
+    <string name="under_des">¡Casi llegamos! ¡pero todavía necesitas ganar algo de peso!</string>
+    <string name="normal_label">Normal</string>
+    <string name="normal_des">¡Excelente! ¡Estás en el nivel normal y probablemente estés en buena forma!</string>
+    <string name="over_label">Exceso de peso</string>
+    <string name="over_des">Tienes sobrepeso. Necesitas entrenar más y perder algo de peso.</string>
+    <string name="mod_ob_label">Moderadamente obeso</string>
+    <string name="mod_ob_des">eres obeso Aunque no pone en peligro la vida, debe hacer más ejercicio y perder algo de peso.</string>
+    <string name="sev_ob_lable">Severamente obeso</string>
+    <string name="sev_ob_des">eres obeso Debe perder peso de inmediato, ya que podría ser peligroso.</string>
+    <string name="ext_ob_label">Extremadamente obeso</string>
+    <string name="ext_ob_des">Estás en un estado muy peligroso. Comienza a perder peso y consulta a tu médico.</string>
+    <string name="validation_basic">Por favor ingrese una cifra válida</string>
 </resources>

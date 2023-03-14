@@ -28,7 +28,11 @@ class BMIActivity : AppCompatActivity() {
                 val bmi = weight / (height * height)
                 displayResult(bmi)
             } else {
-                Toast.makeText(this, "Please enter a valid value", Toast.LENGTH_SHORT).show()
+                Toast.makeText(
+                    this,
+                    resources.getString(R.string.validation_basic),
+                    Toast.LENGTH_SHORT
+                ).show()
             }
         }
 
@@ -39,29 +43,26 @@ class BMIActivity : AppCompatActivity() {
         val description: String
 
         if (bmi <= 15.0) {
-            label = "Severely Underweight"
-            description = "You must eat more and gain some weight!"
+            label = resources.getString(R.string.extremley_under_lable)
+            description = resources.getString(R.string.extremley_under_des)
         } else if (15.0 < bmi && bmi <= 18.5) {
-            label = "Underweight"
-            description = "Almost there! but you still need to gain some weight!"
+            label = resources.getString(R.string.under_label)
+            description = resources.getString(R.string.under_des)
         } else if (18.5 < bmi && bmi <= 25.0) {
-            label = "Normal"
-            description = "Great! You are at the normal level, and you probably are in good shape!"
+            label = resources.getString(R.string.normal_label)
+            description = resources.getString(R.string.normal_des)
         } else if (25.0 < bmi && bmi <= 30.0) {
-            label = "Overweight"
-            description = "You are overweight. You need to workout more and lose some weight."
+            label = resources.getString(R.string.over_label)
+            description = resources.getString(R.string.over_des)
         } else if (30.0 < bmi && bmi <= 35.0) {
-            label = "Moderately Obese"
-            description =
-                "You are obese. Though not life threatening, you need to workout more and lose some weight."
-        }
-        else if (35.0 < bmi && bmi <= 40.0){
-            label = "Severely Obese"
-            description = "You are obese. You need to lose weight immediately, as it might be dangerous."
-        }
-        else{
-            label = "Extremely Obese"
-            description = "You are in a very dangerous state. Start losing weight and see to your doctor."
+            label = resources.getString(R.string.mod_ob_label)
+            description = resources.getString(R.string.mod_ob_des)
+        } else if (35.0 < bmi && bmi <= 40.0) {
+            label = resources.getString(R.string.sev_ob_lable)
+            description = resources.getString(R.string.sev_ob_des)
+        } else {
+            label = resources.getString(R.string.ext_ob_label)
+            description = resources.getString(R.string.ext_ob_des)
         }
 
         val bmiValue = BigDecimal(bmi).setScale(2, RoundingMode.HALF_EVEN).toString()
