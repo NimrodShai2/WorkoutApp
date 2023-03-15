@@ -202,9 +202,11 @@ class ExcersizeActivity : AppCompatActivity(), TextToSpeech.OnInitListener {
             3 -> speak("3")
             2 -> speak("2")
             1 -> speak("1")
-            10 -> speak("Ten Seconds!")
+            10 -> speak("Ten Seconds to go!")
             20 -> speak("Twenty Seconds to go!")
+            30 -> speak("30 Seconds to go!")
             60 -> speak("One Minute!")
+            90 -> speak("90 Seconds!")
             120 -> speak("Two Minutes!")
         }
     }
