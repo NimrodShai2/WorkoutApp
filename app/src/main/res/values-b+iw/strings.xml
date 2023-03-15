@@ -39,4 +39,11 @@
     <string name="ext_ob_label">השמנת יתר קיצונית</string>
     <string name="ext_ob_des">אתה נמצא במצב מסוכן ביותר. אמץ אורח חיים בריא יותר ופנה לרופא.</string>
     <string name="validation_basic">אנא הכנס ערך תקין</string>
+    <string name="choose_int">בחר זמן אינטרוול</string>
+    <string name="hebrew">עברית</string>
+    <string name="english">אנגלית</string>
+    <string name="spanish">ספרדית</string>
+    <string name="quick_workout">תרגיל: 30 שניות, מנוחה: 10 שניות</string>
+    <string name="medium_workout">תרגיל: 1 דקה, מנוחה: 20 שניות</string>
+    <string name="long_workout">תרגיל: 2 דקות, מנוחה: 30 שניות</string>
 </resources>

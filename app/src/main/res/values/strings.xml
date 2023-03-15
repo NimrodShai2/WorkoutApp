@@ -39,4 +39,11 @@
     <string name="ext_ob_des">You are in a very dangerous state. Start losing weight and see to your doctor.</string>
     <string name="ext_ob_label">Extremley Obese</string>
     <string name="validation_basic">Please enter a valid value</string>
+    <string name="choose_int">Choose Interval:</string>
+    <string name="hebrew">Hebrew</string>
+    <string name="english">English</string>
+    <string name="spanish">Spanish</string>
+    <string name="quick_workout">Exercise: 30 Seconds, Rest: 10 Seconds</string>
+    <string name="medium_workout">Exercise: 1 Minute, Rest: 20 Seconds</string>
+    <string name="long_workout">Exercise: 2 Minutes, Rest: 30 Seconds</string>
 </resources>

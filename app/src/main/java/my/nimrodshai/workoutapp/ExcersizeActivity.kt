@@ -42,8 +42,8 @@ class ExcersizeActivity : AppCompatActivity(), TextToSpeech.OnInitListener {
             onBackPressed()
         }
         exerciseList = Constants.defaultExerciseList()
-        restDurationSeconds = 10 //TODO: implement user choice of rest intervals
-        exerciseDurationSeconds = 30//TODO: implement user choice of exercise intervals
+        restDurationSeconds = intent.getIntExtra("REST_DURATION", 5)
+        exerciseDurationSeconds = intent.getIntExtra("EXER_DURATION", 10)
         tts = TextToSpeech(this, this)
 
 
@@ -143,6 +143,7 @@ class ExcersizeActivity : AppCompatActivity(), TextToSpeech.OnInitListener {
                 restProgress++
                 binding?.pbProgress?.progress = restDurationSeconds - restProgress
                 binding?.tvTimer?.text = (restDurationSeconds - restProgress).toString()
+                countToZero(millisUntilFinished)
             }
 
             override fun onFinish() {
@@ -168,6 +169,7 @@ class ExcersizeActivity : AppCompatActivity(), TextToSpeech.OnInitListener {
                 binding?.pbExercise?.progress = exerciseDurationSeconds - exerciseProgress
                 binding?.tvExerciseInFrame?.text =
                     (exerciseDurationSeconds - exerciseProgress).toString()
+                countToZero(millisUntilFinished)
             }
 
             override fun onFinish() {
@@ -176,6 +178,7 @@ class ExcersizeActivity : AppCompatActivity(), TextToSpeech.OnInitListener {
                     exerciseList!![exercisePosition].isSelected = false
                     exerciseList!![exercisePosition].isCompleted = true
                     exerciseAdapter!!.notifyDataSetChanged()
+                    speak("Get some rest!")
                     setUpRestView()
                 } else {
                     finish()
@@ -190,6 +193,20 @@ class ExcersizeActivity : AppCompatActivity(), TextToSpeech.OnInitListener {
 
 
         }.start()
+    }
+
+    private fun countToZero(millisUntilFinished: Long) {
+        when (millisUntilFinished.toInt() / 1000) {
+            5 -> speak("5")
+            4 -> speak("4")
+            3 -> speak("3")
+            2 -> speak("2")
+            1 -> speak("1")
+            10 -> speak("Ten Seconds!")
+            20 -> speak("Twenty Seconds to go!")
+            60 -> speak("One Minute!")
+            120 -> speak("Two Minutes!")
+        }
     }
 
     override fun onDestroy() {
@@ -215,7 +232,7 @@ class ExcersizeActivity : AppCompatActivity(), TextToSpeech.OnInitListener {
 
     override fun onInit(status: Int) {
         if (status == TextToSpeech.SUCCESS) {
-            val result = tts?.setLanguage(Locale.US)//TODO: Implement choice of language
+            val result = tts?.setLanguage(Locale.US)
             if (result == TextToSpeech.LANG_MISSING_DATA ||
                 result == TextToSpeech.LANG_NOT_SUPPORTED
             ) {

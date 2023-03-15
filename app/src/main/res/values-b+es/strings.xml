@@ -39,4 +39,11 @@
     <string name="ext_ob_label">Extremadamente obeso</string>
     <string name="ext_ob_des">Estás en un estado muy peligroso. Comienza a perder peso y consulta a tu médico.</string>
     <string name="validation_basic">Por favor ingrese una cifra válida</string>
+    <string name="choose_int">Elija Intervalo:</string>
+    <string name="hebrew">Hebreo</string>
+    <string name="english">Inglés</string>
+    <string name="spanish">Español</string>
+    <string name="quick_workout">Ejercicio: 30 Segundos, Descanso: 10 Segundos</string>
+    <string name="medium_workout">Ejercicio: 1 Minuto, Descanso: 20 Segundos</string>
+    <string name="long_workout">Ejercicio: 2 Minutos, Descanso: 30 Segundos</string>
 </resources>
