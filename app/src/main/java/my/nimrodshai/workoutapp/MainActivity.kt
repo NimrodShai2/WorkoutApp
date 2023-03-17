@@ -54,7 +54,7 @@ class MainActivity : LocaleAwareCompatActivity() {
         builder.setTitle(resources.getString(R.string.choose_language))
         builder.setSingleChoiceItems(list, currentLanguageDialogPosition
         ) { _, p1 -> currentLanguageDialogPosition = p1 }
-        builder.setPositiveButton("Apply") { dialog, _ ->
+        builder.setPositiveButton(resources.getString(R.string.apply)) { dialog, _ ->
             when (currentLanguageDialogPosition) {
                 0 -> {
                     updateLocale(Locale.ENGLISH)
@@ -68,7 +68,7 @@ class MainActivity : LocaleAwareCompatActivity() {
             }
             dialog.dismiss()
         }
-        builder.setNegativeButton("Cancel"){
+        builder.setNegativeButton(resources.getString(R.string.cancel)){
                 dialog, _ -> dialog.dismiss()
         }
         val alertDialog = builder.create()
@@ -83,7 +83,7 @@ class MainActivity : LocaleAwareCompatActivity() {
         builder.setTitle(resources.getString(R.string.choose_int))
         builder.setSingleChoiceItems(list, currentDurationDialogPosition
         ) { _, p1 -> currentDurationDialogPosition = p1 }
-        builder.setPositiveButton("Apply") { dialog, _ ->
+        builder.setPositiveButton(resources.getString(R.string.apply)) { dialog, _ ->
             when (currentDurationDialogPosition) {
                 0 -> {
                     restDurationSec = 10
@@ -100,7 +100,7 @@ class MainActivity : LocaleAwareCompatActivity() {
             }
             dialog.dismiss()
         }
-        builder.setNegativeButton("Cancel"){
+        builder.setNegativeButton(resources.getString(R.string.cancel)){
                 dialog, _ -> dialog.dismiss()
         }
         val alertDialog = builder.create()

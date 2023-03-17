@@ -46,4 +46,6 @@
     <string name="quick_workout">Exercise: 30 Seconds, Rest: 10 Seconds</string>
     <string name="medium_workout">Exercise: 1 Minute, Rest: 20 Seconds</string>
     <string name="long_workout">Exercise: 2 Minutes, Rest: 30 Seconds</string>
+    <string name="apply">Apply</string>
+    <string name="cancel">Cancel</string>
 </resources>

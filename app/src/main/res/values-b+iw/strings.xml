@@ -46,4 +46,6 @@
     <string name="quick_workout">תרגיל: 30 שניות, מנוחה: 10 שניות</string>
     <string name="medium_workout">תרגיל: 1 דקה, מנוחה: 20 שניות</string>
     <string name="long_workout">תרגיל: 2 דקות, מנוחה: 30 שניות</string>
+    <string name="apply">בצע</string>
+    <string name="cancel">סגור</string>
 </resources>

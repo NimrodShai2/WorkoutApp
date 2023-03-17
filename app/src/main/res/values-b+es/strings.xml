@@ -46,4 +46,6 @@
     <string name="quick_workout">Ejercicio: 30 Segundos, Descanso: 10 Segundos</string>
     <string name="medium_workout">Ejercicio: 1 Minuto, Descanso: 20 Segundos</string>
     <string name="long_workout">Ejercicio: 2 Minutos, Descanso: 30 Segundos</string>
+    <string name="apply">Aplicar</string>
+    <string name="cancel">Cancelar</string>
 </resources>
