@@ -2,6 +2,8 @@
 
 This Android workout app is designed for people who want to stay fit and healthy. The app features a variety of workout routines, including strength training, cardio, and flexibility exercises. It was made in Kotlin using Android Studio, and makes use of the Room library for the databse.
 
+Now published in Google Play! https://play.google.com/store/apps/details?id=my.nimrodshai.workoutapp
+
 The app is still under development and is intended for educational purposes.
 
 ## Features
