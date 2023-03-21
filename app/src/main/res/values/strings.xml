@@ -48,4 +48,6 @@
     <string name="long_workout">Exercise: 2 Minutes, Rest: 30 Seconds</string>
     <string name="apply">Apply</string>
     <string name="cancel">Cancel</string>
+    <string name="error_msg">Oops! Something went wrong!</string>
+    <string name="entry_added">"Workout added successfully to history!"</string>
 </resources>

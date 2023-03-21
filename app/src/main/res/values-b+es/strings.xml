@@ -48,4 +48,6 @@
     <string name="long_workout">Ejercicio: 2 Minutos, Descanso: 30 Segundos</string>
     <string name="apply">Aplicar</string>
     <string name="cancel">Cancelar</string>
+    <string name="error_msg">¡Ups! ¡Algo salió mal!</string>
+    <string name="entry_added">¡Entrenamiento agregado con éxito a la historia!</string>
 </resources>

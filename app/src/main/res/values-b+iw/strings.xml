@@ -48,4 +48,6 @@
     <string name="long_workout">תרגיל: 2 דקות, מנוחה: 30 שניות</string>
     <string name="apply">בצע</string>
     <string name="cancel">סגור</string>
+    <string name="error_msg">אוי! נראה שמשהו השתבש...</string>
+    <string name="entry_added">התרגיל נוסף להיסטוריה בהצלחה!</string>
 </resources>

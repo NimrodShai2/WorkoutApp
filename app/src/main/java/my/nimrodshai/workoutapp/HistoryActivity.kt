@@ -2,9 +2,11 @@ package my.nimrodshai.workoutapp
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
+import kotlinx.coroutines.CoroutineExceptionHandler
 import kotlinx.coroutines.launch
 import my.nimrodshai.workoutapp.databinding.ActivityHistoryBinding
 import my.nimrodshai.workoutapp.db.HistoryDao
@@ -28,7 +30,15 @@ class HistoryActivity : AppCompatActivity() {
     }
 
     private fun getAllDates(historyDao: HistoryDao) {
-        lifecycleScope.launch {
+        val handler = CoroutineExceptionHandler { _, throwable ->
+            println(throwable.message)
+            binding?.tvHistory?.visibility = View.GONE
+            binding?.rvHistory?.visibility = View.GONE
+            binding?.tvNoDataAvailable?.visibility = View.VISIBLE
+            binding?.tvNoDataAvailable?.text = resources.getString(R.string.error_msg)
+
+        }
+        lifecycleScope.launch(handler) {
             historyDao.getAllDates().collect {
                 if (it.isNotEmpty()) {
                     binding?.tvHistory?.visibility = View.VISIBLE

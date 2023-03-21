@@ -3,7 +3,9 @@ package my.nimrodshai.workoutapp
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Toast
 import androidx.lifecycle.lifecycleScope
+import kotlinx.coroutines.CoroutineExceptionHandler
 import kotlinx.coroutines.launch
 import my.nimrodshai.workoutapp.databinding.ActivityFinishBinding
 import my.nimrodshai.workoutapp.db.HistoryDao
@@ -37,9 +39,18 @@ class FinishActivity : AppCompatActivity() {
         val dateTime = c.time
         val sdf = SimpleDateFormat("dd MMM yyyy HH:mm:ss", Locale.getDefault())
         val date = sdf.format(dateTime)
+        val handler = CoroutineExceptionHandler{_, throwable ->
+            println(throwable.message)
+            Toast.makeText(this@FinishActivity,
+                resources.getString(R.string.error_msg),
+                Toast.LENGTH_SHORT).show()
+        }
 
-        lifecycleScope.launch{
+        lifecycleScope.launch(handler){
             historyDao.insert(HistoryEntity(date))
+            Toast.makeText(this@FinishActivity,
+                resources.getString(R.string.entry_added),
+                Toast.LENGTH_SHORT).show()
         }
     }
 
